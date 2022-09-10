@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>CyberShop</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="main">
+      <!-- HEADER -->
+      <header class="header">
+        <div class="container">
+          <!-- Header NAV -->
+          <div class="header__nav d-flex justify-content-between">
+            <ul class="nav__list d-flex">
+              <li class="nav__item nav__item--prevent d-flex">
+                <a href="#" class="nav__link d-flex"> Tải ứng dụng </a>
+                <div class="header__qr">
+                  <img class="header__qr-img" src="./img/qr.png" alt="QR" />
+                  <div class="header__qr-download">
+                    <img
+                      class="header__qr-app"
+                      src="./img/appstore.png"
+                      alt=""
+                    />
+                    <img class="header__qr-app" src="./img/chplay.png" alt="" />
+                  </div>
+                </div>
+              </li>
+              <li class="nav__item d-flex">
+                Kết nối
+                <a href="#" class="nav__link"
+                  ><i class="fa-brands fa-facebook"></i
+                ></a>
+                <a href="#" class="nav__link"
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </li>
+            </ul>
+
+            <ul class="nav__list d-flex">
+              <li class="nav__item nav__item--prevent d-flex">
+                <a href="#" class="nav__link d-flex">Thông báo</a>
+              </li>
+              <li class="nav__item d-flex">
+                <a href="#" class="nav__link d-flex">Hỗ trợ</a>
+              </li>
+            </ul>
+          </div>
+          <!-- Header NAV -->
+
+          <!-- header search -->
+          <div class="header-with-search">
+            <div class="header__logo">
+              <img class="header__logo-img" src="./img/MAX-OP1.png" alt="" />
+            </div>
+            <div class="header__search">
+              <div class="header__search-input-warp">
+                <input id="searchName"  placeholder="Tìm kiếm sản phẩm..." type="text" />
+              </div>
+              <button class="header__search-btn">
+                <i class="header__search-icon fa-solid fa-magnifying-glass"></i>
+              </button>
+            </div>
+            <div class="header__cart"> 
+            <button class="header__cart-btn"  data-toggle="modal" data-target="#myModal">
+            <i class="header__cart-icon fa-solid fa-cart-shopping"></i>
+            <div class="header__cart-price">
+              <p class="header__cart-num"><span >0</span><sub>$</sub></p>
+            </div>
+            </button>
+            </div>
+          </div>
+          <!-- header search -->
+        </div>
+      </header>
+      <!-- HEADER -->
+
+      <!-- CONTENT -->
+      <div class="content">
+        <div class="container">
+          <div class="row">
+            <!-- category -->
+            <div class="col-xl-2">
+              <div class="category">
+                <div class="category__heading">
+                  <i class="category__heading-icon fa-solid fa-list"></i>
+                  Danh mục
+                </div>
+                <select id="mySelect" onchange="myFunction()" class="category__list form-control">
+                  <option>Tất cả SP</option>
+                  <option type="SamSung">SamSung</option>
+                  <option type="Apple">Apple</option>
+                </select>
+
+              </div>
+            </div>
+            <!-- product -->
+            <div class="col-xl-10">
+              <div id="home-product-user" class="row"></div>
+            </div>
+           </div>
+        </div>
+      </div>
+      <!-- CONTENT -->
+
+      <!-- FOOTER -->
+      <div class="footer">
+        <div class="container">
+          <div class="">
+            <div class="footer__warp"></div>
+          </div>
+       </div>
+       <div class="footer__info">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3">
+              <div class="footer__heading">CHĂM SÓC KHÁCH HÀNG</div>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Trung Tâm Trợ Giúp</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Cyber Blog</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Cyber Mall</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Hướng Dẫn Mua Hàng</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Hướng Dẫn Bán Hàng</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <div class="footer__heading">VỀ CYBER</div>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Giới Thiệu Về Cyber Việt Nam</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Tuyển Dụng</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Điều Khoản Cyber</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Chính Sách Bảo Mật</a>
+                </li>
+                <li class="footer__item">
+                  <a href="#" class="footer__link">Chính Hãng</a>
+                </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <div class="footer__heading">THEO DÕI CHÚNG TÔI TRÊN</div>
+              <ul class="footer__list">
+                <li class="footer__item">
+                  <a href="#url" class="footer__link">
+                      <i class="fa-brands fa-facebook"></i>
+                      Facebook
+                  </a>
+              </li>
+              <li class="footer__item">
+                  <a href="#url" class="footer__link">
+                      <i class="fa-brands fa-instagram-square"></i>
+                      Instagram
+                  </a>
+              </li>
+              <li class="footer__item">
+                  <a href="#url" class="footer__link">
+                      <i class="fa-brands fa-invision"></i>
+                      LinkedIn
+                  </a>
+              </li>
+              </ul>
+            </div>
+            <div class="col-md-3">
+              <div class="footer__heading">
+                TẢI ỨNG DỤNG CYBER NGAY THÔI
+            </div>
+            <div class="footer__downl">
+                <img src="./img/qr.png" alt="" class="footer__qr">
+                <div class="footer__downl-app">
+                    <img src="./img/appstore.png" alt="" class="footer__downl-app-img">
+                    <img src="./img/chplay.png" alt="" class="footer__downl-app-img">
+                </div>
+            </div>
+            </div>
+          </div>
+        </div>
+        
+       </div>
+      </div>
+      <!-- FOOTER -->
+    </div>
+
+
+    <!-- MODAL -->
+    <div
+      class="modal fade"
+      id="myModal"
+    >
+      <div class="modal-dialog modal__nav" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Giỏ hàng</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+                        <div class="cart-row">
+                            <span class="cart-item cart-header cart-column">Sản Phẩm</span>
+                            <span class="cart-price cart-header cart-column">Giá $</span>
+                            <span class="cart-quantity cart-header cart-column">Số Lượng</span>
+                        </div>
+                        <div id="cartItem" class="cart-items"> 
+                      </div>
+                      <div class="cart-total">
+                          <strong class="cart-total-title">Tổng Cộng:</strong>
+                          <span class="cart-total-price"></span>
+                      </div>
+
+                      
+          <div class="modal-footer">
+            <button id="tks-btn" type="button" class="btn btn-primary-color" onclick="thanhToanSP()" value="Reset">Thanh toán</button>
+
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Đóng
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- MODAL -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Axios -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.27.2/axios.min.js"
+      integrity="sha512-odNmoc1XJy5x1TMVMdC7EMs3IVdItLPlCeL5vSUPN2llYKMJ2eByTTAIiiuqLg+GdNr9hF6z81p27DArRFKT7A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    
+    <script src="./src/models/product.js"></script>
+    <script src="./src/services/service.js"></script>
+    <script src="./src/controller/main.js"></script>
+
+    <script src="./js/style.js"></script>
+
+  </body>
+</html>
